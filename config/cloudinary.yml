@@ -1,0 +1,13 @@
+development:
+  cloud_name: mhdez-dev
+  api_key: 531747421791329
+  api_secret: 4pQfkRZOjXDNQ2gXtgL_X0OOVz4
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: mhdez-dev
+  api_key: 531747421791329
+  api_secret: 4pQfkRZOjXDNQ2gXtgL_X0OOVz4
+  secure: true
+  cdn_subdomain: true
