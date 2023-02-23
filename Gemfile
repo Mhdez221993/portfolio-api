@@ -5,7 +5,15 @@ ruby '3.2.1'
 
 gem 'devise'
 
-gem "ffi"
+gem 'devise-jwt'
+
+gem 'rack-cors'
+
+gem 'jsonapi-serializer'
+
+gem 'cancancan'
+
+gem 'ffi'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'

@@ -1,4 +1,7 @@
 class Api::V1::ProjectsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!, except: %i[index show]
+
   def index
     projects = Project.all
     render json: projects
