@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :projects
 
   MAX_ADMINS = 1
+  enum role: %i[guest regular admin]
 
   include Devise::JWT::RevocationStrategies::JTIMatcher
   # Include default devise modules. Others available are:
@@ -11,6 +12,8 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, presence: true, length: { minimum: 8 }
+  validates :role, presence: true
+
   validate :admin_quota, on: :create
 
   def admin?
